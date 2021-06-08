@@ -45,7 +45,7 @@ if __name__ == '__main__':
                     final_list.append(temp)
                 else:
                     continue
-    print(final_lis
+    print(final_list)
           
           
                   
