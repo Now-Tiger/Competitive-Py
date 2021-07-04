@@ -7,10 +7,11 @@ def unique(s):
     length = len(s)
     for i in range(length):
         c = s[i]
-        '''
-        if c is present in the str, it returns the index of c
-        else return -1
-        ''' 
+        
+        # if c is present in str, it returns
+        # the index of c, else it returns - 1
+        # print(st.index(c))
+        
         if c not in st:
             st += c
     return st
@@ -20,3 +21,4 @@ if __name__ == "__main__":
     s = "needforspeed"
     print(unique(s))
 
+    
