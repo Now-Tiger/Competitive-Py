@@ -7,7 +7,6 @@ def unique(s):
     length = len(s)
     for i in range(length):
         c = s[i]
-        
         # if c is present in str, it returns
         # the index of c, else it returns - 1
         # print(st.index(c))
