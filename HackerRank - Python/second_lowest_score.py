@@ -11,7 +11,7 @@ Harsh 39
 
 3. We have to put second rankers in the alphabatical manner on the stage let say.
 4. i.e Berry first then Harry 
-5. Since B comes first compered to H.  
+5. Since B comes first compared to H.  
 
 """ 
 #********************************************************************************************************************************
