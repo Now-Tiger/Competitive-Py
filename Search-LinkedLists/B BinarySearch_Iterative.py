@@ -40,3 +40,6 @@ if index != -1:
     print('Element found at index', index)
 else :
     print('Element does not exist in the list.')
+
+    
+ 
