@@ -26,7 +26,7 @@ def floorsearch(A, left, right, x):
 
     # if key found at mid then return mid index :
     # formula to calculate mid.
-    mid = int((left + right) / 2)      
+    mid = int(left + (right - left) / 2)      
     if A[mid] == x :
         return mid
 
@@ -51,3 +51,6 @@ if (index == -1):
                     in array ", end = "")
 else:
     print("Floor of", x, "is", A[index])
+    
+    
+    
