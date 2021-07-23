@@ -1,2 +1,2 @@
-# HackerRank
-HackerRank  problems and their solutions.
+# Leetcode, HackerRank ...
+_Problems and their solutions in python which I've attempted so far_
