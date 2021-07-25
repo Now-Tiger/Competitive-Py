@@ -2,7 +2,7 @@
 Given a sorted array of n uniformly distributed values arr[], 
 write a function to search for a particular element x in the array. 
 
-intuatuion : The Interpolation Search is an improvement over Binary Search for instances, where the values 
+intuituion : The Interpolation Search is an improvement over Binary Search for instances, where the values 
              in a sorted array are uniformly distributed 
 
 workflow :  interpolation search may go to different locations according to the value of the key being searched. 
