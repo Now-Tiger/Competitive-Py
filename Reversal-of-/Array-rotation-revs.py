@@ -43,3 +43,5 @@ d = 2
 
 leftRotate(arr, d) # Rotate array by 2
 printArray(arr)
+
+
