@@ -30,11 +30,10 @@ def lenofsubstring(string) :
     for i, e in enumerate(string):
     # check if we already have seen the element : 
         if e in seen:
-            start = max(start, seen[e]+1)
-            
+            start = max(start, seen[e]+1)           
         max_length = max(max_length, i - start + 1)
             
-            # update index :
+        # update index :
         seen[e] = i
     return max_length
 
@@ -42,4 +41,5 @@ def lenofsubstring(string) :
 string = "abcbcab"
 lenofsubstring(string)
 string
+
 
