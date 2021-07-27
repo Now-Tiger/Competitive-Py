@@ -24,7 +24,7 @@ def lenofsubstring(string) :
     seen = {}
     max_length = 0
         
-        # starting initial point window to be zero :
+    # starting initial point window to be zero :
     start = 0
         
     for i, e in enumerate(string):
