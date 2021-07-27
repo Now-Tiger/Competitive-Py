@@ -42,4 +42,3 @@ string = "abcbcab"
 lenofsubstring(string)
 string
 
-
