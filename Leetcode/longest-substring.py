@@ -20,7 +20,7 @@ Explanation: The answer is "b", with the length of 1.Example 1:
 
 def lenofsubstring(string) :
         
-    # Creating a set to store the last positions of occurrence
+    # Creating a hash-set to store the last positions of occurrence
     seen = {}
     max_length = 0
         
