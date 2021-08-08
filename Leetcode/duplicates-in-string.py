@@ -17,7 +17,7 @@ def printDups(string) :
             print(chr(k) + ", count = " + str(i))
         k += 1
 
-string = "geeksforgeeks"
+string = "TigerTigeR"
 print(printDups(string))
 
 
