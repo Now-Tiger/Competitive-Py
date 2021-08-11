@@ -22,3 +22,5 @@ class Solution:
                 return[i,  dict[remaining]]
             else :
                 dict[num] = i
+
+ 
