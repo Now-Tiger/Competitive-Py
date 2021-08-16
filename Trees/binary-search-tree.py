@@ -1,7 +1,7 @@
 
 # Implement a binary search tree. 
 # Insert elements.
-# Search one which iss insearted : return True.
+# Search one which is insearted : return True.
 # Search one which is not in the tree : return False.
 
 class Node(object) :
