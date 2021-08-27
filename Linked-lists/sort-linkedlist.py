@@ -7,7 +7,6 @@ class ListNode:
         self.val = data
         self.next = next
 
-
 def make_list(elements):
     head = ListNode(elements[0])
     for element in elements[1:]:
@@ -17,7 +16,6 @@ def make_list(elements):
         ptr.next = ListNode(element)
 
     return head
-
 
 def print_list(head):
     ptr = head
