@@ -1,7 +1,7 @@
 
 # ----------- Building an undirected graph and finding shortest path using Dictionaries in Python --------------
 
-def find_shorted_path(graph, start, goal):
+def find_shortest_path(graph, start, goal):
     explored = []
     queue = [[start]]
 
@@ -46,7 +46,7 @@ if __name__ == "__main__":
             'F': ['C'],
             'G': ['C']}
      
-    find_shorted_path(graph, 'D', 'G')
+    find_shortest_path(graph, 'D', 'G')
 
 # $ python find-shorted-path.py 
 # Shortest path =  D B A C G
