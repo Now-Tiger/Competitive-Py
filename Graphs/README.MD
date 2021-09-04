@@ -64,6 +64,15 @@ __[BFS follows the following rules](https://www2.seas.gwu.edu/~ayoussef/cs6212/g
   3. Repeat the previous step until no more nodes can be vsisted.
   4. If there are still unvisited nodes, repeat from Step 1.
 
+__BFS pseudocode :__<br>
+``` pseudocode
+create a queue Q
+mark v as visited and put v into Q
+while Q is non-empty 
+    remove the head u of Q 
+    mark and enqueue all (unvisited) neighbours of u
+```
+
 ## [Depth-First Search (BFS)](https://en.wikipedia.org/wiki/Depth-first_search) :
 - Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.
 - A version of depth-first search was investigated in the 19th century by French mathematician Charles Pierre Trémaux as a strategy for solving mazes.
