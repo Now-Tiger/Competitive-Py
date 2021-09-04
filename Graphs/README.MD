@@ -1,9 +1,8 @@
 # Graphs :
-![image](https://media.geeksforgeeks.org/wp-content/cdn-uploads/undirectedgraph.png) <br>
-- A Graph is a non-linear data structure consisting of nodes and edges. The nodes are sometimes also referred to as vertices and the edges are lines or arcs that connect any two nodes in the graph. More formally a Graph can be defined as :
-- #### A Graph consists of a finite set of vertices(or nodes) and set of Edges which connect a pair of nodes.
-- In the above Graph, the set of vertices V = {0,1,2,3,4} and the set of edges E = {0 1, 1 2, 2 3, 3 4, 0 4, 1 4, 1 3}.
-
+![image](https://miro.medium.com/max/2400/1*bgRmFfnYXHYXSv1pbNea0A.png)<br><br>
+- __A Graph is a non-linear data structure consisting of nodes and edges. The nodes are sometimes also referred to as vertices and the edges are lines or arcs that connect any two nodes in the graph.__<br><br>
+- More formally a Graph can be defined as :
+- __A Graph consists of a finite set of vertices(or nodes) and set of Edges which connect a pair of nodes.__<br><br>
 - Graphs are used to solve many real-life problems. Graphs are used to represent networks. The networks may include paths in a city or telephone network or circuit network. Graphs are also used in __social networks like linkedIn, Facebook.__ 
 - __For example, in Facebook, each person is represented with a vertex(or node). Each node is a structure and contains information like person id, name, gender, locale etc.__
 
@@ -75,10 +74,29 @@ while Q is non-empty
 
 ## [Depth-First Search (BFS)](https://en.wikipedia.org/wiki/Depth-first_search) :
 - Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.
-- A version of depth-first search was investigated in the 19th century by French mathematician Charles Pierre Trémaux as a strategy for solving mazes.
+- A version of depth-first search was investigated in the 19th century by French mathematician __Charles Pierre Trémaux__ as a strategy for solving mazes.
 
 __[DFS follows the following rules](https://www2.seas.gwu.edu/~ayoussef/cs6212/graphsearch.html):__<br>
   1. Select an unvisited node s, visit it, and treat as the current node.<br>
   2. Find an unvisited neighbor of the current node, visit it, and make it the new current node;<br>
   3. If the current node has no unvisited neighbors, backtrack to the its parent, and make that the new current node; Repeat the above two steps until no more nodes can be visited.<br>
   4. If there are still unvisited nodes, repeat from step 1.<br>
+
+__DFS Pseudocode (recursive implementation) :__<br>
+- The pseudocode for DFS is shown below. 
+- In the init() function, notice that we run the DFS function on every node.<br>
+- This is because the graph might have two different disconnected parts so to make sure that we cover every vertex, we can also run the DFS algorithm on every node.<br>
+``` 
+DFS(G, u)
+    u.visited = true
+    for each v ∈ G.Adj[u]
+        if v.visited == false
+            DFS(G,v)
+     
+init() {
+    For each u ∈ G
+        u.visited = false
+     For each u ∈ G
+       DFS(G, u)
+}
+```
