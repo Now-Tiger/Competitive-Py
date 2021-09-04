@@ -26,3 +26,5 @@ if __name__ == '__main__' :
 # $ python simple-bfs.py 
 # 1->2->3->None
 
+# T.C = O(V+E)
+# where VV is the number of vertices and EE is the number of edges.
