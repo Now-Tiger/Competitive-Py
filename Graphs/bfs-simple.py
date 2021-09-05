@@ -19,12 +19,28 @@ def bfs(graph, root) :
 
 # Driver code :
 if __name__ == '__main__' :
-    graph = {0: [1, 2], 1: [2], 2: [3], 3: [1, 2]}
-    print(bfs(graph, 1))
+    g = {0: [1, 2], 1: [2], 2: [3], 3: [1, 2]}
+    print(bfs(g, 1))
+
+    print('--------------------\nAnother Example :\n-------------------- ')
+   
+    graph = {'A': ['B', 'E', 'C'],
+            'B': ['A', 'D', 'E'],
+            'C': ['A', 'F', 'G'],
+            'D': ['B', 'E'],
+            'E': ['A', 'B', 'D'],
+            'F': ['C'],
+            'G': ['C']}
+    print(bfs(graph, 'A'))
 
 
 # $ python simple-bfs.py 
-# 1->2->3->None
+# 1 -> 2 -> 3 -> None
+# --------------------
+# Another Example :
+# -------------------- 
+# A -> B -> E -> C -> D -> F -> G -> None
+
 
 # T.C = O(V+E)
 # where V is the number of vertices and EE is the number of edges.
