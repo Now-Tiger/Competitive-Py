@@ -1,5 +1,5 @@
 
-# -# ----------------------------------- Iterative Implementation of BFS --------------------------------------------- 
+# ----------------------------------- Iterative Implementation of BFS --------------------------------------------- 
 
 from collections import deque
 
