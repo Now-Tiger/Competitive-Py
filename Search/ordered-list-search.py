@@ -2,6 +2,7 @@
 # --------------------------------- Ordered list search ---------------------------------
 
 def search(ordered_list, key):
+    ordered_list_size = len(ordered_list)
     for i in ordered_list :
         if key == ordered_list[i] :
             return i
@@ -14,7 +15,7 @@ def search(ordered_list, key):
 
 if __name__ == '__main__':
     scores = [2, 3, 4, 6, 7]
-    key = 5
+    key = 8
     position = search(scores, key)
 
     if position is None:
@@ -35,7 +36,7 @@ if __name__ == '__main__':
 
 
 # $ python ordered-list-search.py
-# 5 does not exist !
+# 8 does not exist !
 # ------------------------------
 # 7 found at position 4
 
