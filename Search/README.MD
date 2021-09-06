@@ -1,1 +1,1 @@
-_problems on Linked lists & search algorithms here_ 📚
+_problems search algorithms here_ 📚
