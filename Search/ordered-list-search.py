@@ -2,14 +2,15 @@
 # --------------------------------- Ordered list search ---------------------------------
 
 def search(ordered_list, key):
-    ordered_list_size = len(ordered_list)
-    for i in range(ordered_list_size):
-        if key == ordered_list[i]:
+    for i in ordered_list :
+        if key == ordered_list[i] :
             return i
-        elif ordered_list[i] > key:
+        elif ordered_list[i] > key :
             return None
-    return None
+    return None 
 
+
+# Driver function :
 
 if __name__ == '__main__':
     scores = [2, 3, 4, 6, 7]
@@ -37,3 +38,5 @@ if __name__ == '__main__':
 # 5 does not exist !
 # ------------------------------
 # 7 found at position 4
+
+# T.C = O(n)
