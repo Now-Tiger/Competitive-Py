@@ -3,7 +3,7 @@
 
 def search(ordered_list, key):
     ordered_list_size = len(ordered_list)
-    for i in ordered_list :
+    for i in range(ordered_list_size) :
         if key == ordered_list[i] :
             return i
         elif ordered_list[i] > key :
