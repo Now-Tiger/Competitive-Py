@@ -38,7 +38,7 @@ def main() :
 if __name__ == '__main__' :
     main()
 
-# $ python queue-implementation.py 
+# $ python queue.py 
 # ['udemy', 'udacity']
 
 
