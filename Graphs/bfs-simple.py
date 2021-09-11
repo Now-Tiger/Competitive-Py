@@ -43,4 +43,4 @@ if __name__ == '__main__' :
 
 
 # T.C = O(V+E)
-# where V is the number of vertices and EE is the number of edges.
+# where V is the number of vertices and E is the number of edges.
