@@ -26,12 +26,12 @@ if __name__ == '__main__' :
 
 
 # $ python count-occurances.py 
-# T : 2
-# i : 2
-# g : 2
-# e : 2
-# r : 2
-# R : 1
+# e : 3
+# t : 2
+# h : 1
+# r : 1
+# n : 1
+
 
 # T.C : O(n) 
 
