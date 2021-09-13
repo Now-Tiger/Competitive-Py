@@ -24,14 +24,13 @@ def findmissing(arr) :
     total = sum(arr) 
     return (n + 1) + n * (n + 1) // 2 - total
 
-
 if __name__ == '__main__' :
     arr = [3, 4, 6, 1, 5]
     print(f'Missing value is : {findmissing(arr)}')
-
 
 # $ python find-missing.py 
 # Missing value is : 2
 
 # T.C = O(n),     S.C = O(1)
+
 
