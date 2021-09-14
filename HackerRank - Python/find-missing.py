@@ -48,3 +48,21 @@ if __name__ == '__main__' :
 # Missing value is : 6
 
 
+# ------------------------------------------------------------------------------------------------------------------------------------
+
+# Above two algorithms dont work properly when we have unsorted array of numbers or large numbers such as 881, 81, 86, 95, 999. 
+# Following implementation does the job.
+
+def findmissing(array) :
+    array.sort()
+    missing = [item for item in range(array[0], array[-1]+1) if item not in array]
+    print(missing)
+    
+if __name__ == '__main__' :
+    array = [888, 886, 885, 883, 884, 882]
+    findmissing(array)
+   
+# $ python find-missing.py 
+# [887]
+
+
