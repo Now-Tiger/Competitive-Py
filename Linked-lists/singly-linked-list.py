@@ -29,9 +29,6 @@ e3.next_val = e4
 list.printlist()
 
 # output :
-# Mon
-# Tue
-# Wed
-# Thurs
-
 # Mone -> Tue -> Wed -> Thurs
+
+
