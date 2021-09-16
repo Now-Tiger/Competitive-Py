@@ -42,3 +42,14 @@ l.printlist()
 l.remove_dups()
 print('\nAfter removal of duplicates\n----------------------------------------\n')
 l.printlist()
+
+
+# $ python remove-duplicates-from-unsorted-linkedlist.py
+# 25 -> 35 -> 15 -> 32 -> 25 -> 80 -> 15 -> None
+
+# After removal of duplicates
+# ----------------------------------------
+
+# 25 -> 35 -> 15 -> 32 -> 80 -> None
+
+
