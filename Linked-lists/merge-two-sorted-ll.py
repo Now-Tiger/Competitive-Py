@@ -27,25 +27,18 @@ class ListNode:
 
 class Solution:
     def mergetwolists(self, l1, l2):
-        start = ListNode()
-        end = ListNode()
-        start.next = end
-        while l1 is not None or l2 is not None:
-            if l1 is None:
-                temp = ListNode(l2.value)
-                l2 = l2.next
-            elif l2 is None:
-                temp = ListNode(l1.value)
-                l1 = l1.next
-            elif l1.value <= l2.value:
-                temp = ListNode(l1.value)
+        dummy = Node(0) 
+        temp = dummy
+        while l1 and l2:
+            if l1.value <= l2.value:
+                temp.next = l1
                 l1 = l1.next
             else:
-                temp = ListNode(l2.value)
+                temp.next = l2
                 l2 = l2.next
-            end.next = temp
-            end = end.next
-        return start.next.next
+            temp = temp.next
+        temp.next = l1 or l2  # if any l1 or l2 = None temp point to the remaning list
+        return dummy.next     # as dummy point to 0 define initially
 
 # ------------------------------------------------------ Tests ----------------------------------------------------------
 
