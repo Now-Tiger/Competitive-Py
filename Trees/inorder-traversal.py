@@ -43,7 +43,7 @@ tree.insert(10)
 tree.insert(19)
 tree.insert(31)
 tree.insert(42)
-print(tree.printTree()) 
+tree.printTree() 
 print(tree.inorder(tree))
 
 
