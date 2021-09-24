@@ -1,37 +1,50 @@
-# Remove Duplicates from Sorted Array
+# ---------------------------------------------------- Remove Duplicates from Sorted Array ----------------------------------------------------
 
-def removeduplicates(arr, n) :
-    # base condition :
-    if n == 0 | n == 1 :
-        return n 
-    # create new array of same length :
-    # where we can save unique values.
-    temp = list(range(n))
-    j = 0
+# Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. 
+# The relative order of the elements should be kept the same.
 
-    for i in range(n-1) :
-        # if the next value is not equal
-        # then save current value in temp.
-        if arr[i] != arr[i + 1] :
-            temp[j] = arr[i]
-            j += 1
+# Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of 
+# the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final 
+# result. It does not matter what you leave beyond the first k elements.
 
-    # since we have not looked last value :
-    temp[j] = arr[n - 1]
-    j += 1
+# Return k after placing the final result in the first k slots of nums.
 
-    # modify the array :
-    for i in range(0, j) :
-        arr[i] = temp[i]
-    return j
+# Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
-# Driver code
-arr = [1, 2, 2, 3, 4, 4, 4, 5, 5]
-n = len(arr)
-# removeDuplicates() returns
-# new size of array.
-n = removeduplicates(arr, n)
+# Example 1:
+# Input: nums = [1,1,2]
+# Output: 2, nums = [1,2,_]
+# Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+# It does not matter what you leave beyond the returned k (hence they are underscores).
 
-# Print updated array
-for i in range(n):
-    print("%d" % (arr[i]), end=" ")
+# --------------------------------------------------------------------------------------------------------------------------------------------- 
+
+class Solution : 
+    def removeduplicates(arr, n) :
+        # base condition :
+        if n == 0 | n == 1 :
+            return n 
+        temp = list(range(n))
+        j = 0
+        for i in range(n-1) :
+            if arr[i] != arr[i + 1] :
+                temp[j] = arr[i]
+                j += 1
+        temp[j] = arr[n - 1]
+        j += 1
+        # modify the array :
+        for i in range(0, j) :
+            arr[i] = temp[i]
+        return j
+
+    
+if __name__ == '__main__' :
+    arr = [0,0,1,1,1,2,2,3,3,4]
+    n = len(arr)
+    n = Solution.removeduplicates(arr, n)
+    # Print updated array
+    for i in range(n):
+        print("%d" % (arr[i]), end=" ")
+
+# $ python remove-duplicate.py 
+# 0 1 2 3 4 
