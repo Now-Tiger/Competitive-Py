@@ -27,7 +27,7 @@ def isvalid(s, t) :
     for i in range(0, len(s)) :
         if s_new[i] != t_new[i] :
             return False 
-    return True      # T.C - O(nlong)
+    return True      # T.C - O(nlogn)
 
 
 # driver code :
