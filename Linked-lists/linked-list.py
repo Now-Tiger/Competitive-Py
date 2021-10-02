@@ -17,7 +17,7 @@ class Linkedlist :
     def __init__(self, head = None) :
         self.head = head 
 
-    # Search an element and print its index :
+    # Search an element in the list :
     def search(self, list, key) :
         if not list : 
             return False 
