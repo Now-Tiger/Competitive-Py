@@ -1,4 +1,4 @@
-# -------------------------------------------- Stack Implementation in Python ---------------------------------------------
+# -------------------------------------------- Stack Implementation in Python -----------------------------------------------
 
 # The stack can easily be implemented. Following is the custom stack implementation in Python.
 
@@ -11,7 +11,11 @@
 # isEmpty: Checks whether the stack is empty.
 # isFull: Checks whether the stack is full.
 
-# -------------------------------------------------------------------------------------------------------------------------
+# NOTE : stack implementation using dynamic array has many limitions. So the alernate approach is 'Repeated Doublig'.
+#        Below code is representation of stack implementation using repeated doubling array apporach, 
+#        which runs in O(n) complexity 
+
+# ---------------------------------------------------------------------------------------------------------------------------
 
 import random 
 
