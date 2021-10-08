@@ -1,6 +1,8 @@
 # -------------------------------------------- Stack Implementation in Python ---------------------------------------------
 
-# The stack can easily be implemented. Following is the custom stack implementation in Python.
+# The stack can easily be implemented. 
+
+# Following is the custom stack implementation in Python using repeated doubling array implementation.
 
 # The stack supports the following standard operations:
 
