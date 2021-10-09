@@ -59,13 +59,13 @@ class Queue(object) :
     def queueRear(self) :
         if self.rear is None :
             print('Sorry the queue is empty')
-            raise IndentationError
+            raise IndexError
         self.rear.data
 
     def queueFront(self) :
         if self.front is None :
             print('Sorry queue is empty')
-            raise IndentationError
+            raise IndexError
         self.front.data
     
     def size(self) :
