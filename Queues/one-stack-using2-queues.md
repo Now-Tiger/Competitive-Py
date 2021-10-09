@@ -32,7 +32,7 @@ class Queue(object) :
             self.queue.remove(a)
             return a
         else :
-            raise IndentationError
+            raise IndexError
     
     def size(self) :
         return len(self.queue)
@@ -53,7 +53,7 @@ class Stack(object) :
 
     def pop(self) :
         if self.isEmpty() :
-            raise IndentationError
+            raise IndexError
         
         elif self.q2.isEmpty() :
             while not self.q1.isEmpty() :
