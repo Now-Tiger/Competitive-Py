@@ -50,7 +50,7 @@ class Queue(object) :
     def deQueue(self) :
         if self.rear is None :
             print('Sorry, the queue is empty')
-            raise IndentationError
+            raise IndexError
         result = self.rear.data
         self.rear = self.rear.last
         self.size -= 1
