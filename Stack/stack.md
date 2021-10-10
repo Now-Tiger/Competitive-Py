@@ -1,19 +1,16 @@
-# -------------------------------------------- Stack Implementation in Python ---------------------------------------------
+## Stack Implementation in Python 
+- The stack can easily be implemented. 
+- Following is the custom stack implementation in Python using __repeated doubling array implementation__.
 
-# The stack can easily be implemented. 
+### The stack supports the following standard operations:
+- __push__ : Pushes an item at the top of the stack.
+- __pop__ : Remove and return the item from the top of the stack.
+- __peek__: Returns the item at the top of the stack without removing it.
+- __size__ : Returns the total number of items in the stack.
+- __isEmpty__ : Checks whether the stack is empty.
+__isFull__ : Checks whether the stack is full.
 
-# Following is the custom stack implementation in Python using repeated doubling array implementation.
-
-# The stack supports the following standard operations:
-
-# push: Pushes an item at the top of the stack.
-# pop: Remove and return the item from the top of the stack.
-# peek: Returns the item at the top of the stack without removing it.
-# size: Returns the total number of items in the stack.
-# isEmpty: Checks whether the stack is empty.
-# isFull: Checks whether the stack is full.
-
-# -------------------------------------------------------------------------------------------------------------------------
+``` python
 
 import random 
 
@@ -126,3 +123,4 @@ if __name__ == '__main__' :
 
 
 # T.C = O(n) .
+```
