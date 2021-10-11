@@ -23,7 +23,7 @@ n = len(arr)
 
 # Function call
 result = linear_search(arr, n, x)
-if result != 1:
+if result != -1:
     print('Element found at index', result)
 else :
     print('Element does not exist.')
@@ -32,3 +32,4 @@ else :
 # Linear search is rarely used practically because other search algorithms such as the 
 # binary search algorithm and hash tables allow significantly faster-searching comparison to 
 # Linear search.
+# T.C = O(n)
