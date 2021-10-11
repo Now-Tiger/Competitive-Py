@@ -38,6 +38,6 @@ if __name__ == '__main__' :
 
 # The above program is not complete yet, cause if we provide large number of value as a key, 
 # then we get errors : IndexError,
-# should raise IndexError in the program itself when someone provides higher value to search in
+# We should provide/raise IndexError in the program itself when someone provides higher value to search in
 # the given search-space.
 ```
