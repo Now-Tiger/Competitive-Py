@@ -27,9 +27,11 @@ class Solution :
         if root is None :
             return 0
         if root.left and root.right :
-            return min(self.minDepth(root.left), self.minDepth(root.right)) +1
+            return min(self.minDepth(root.left),
+                        self.minDepth(root.right)) +1
         else :
-            return max(self.minDepth(root.left), self.minDepth(root.right)) + 1
+            return max(self.minDepth(root.left),
+                        self.minDepth(root.right)) + 1
 
 
 if __name__ == '__main__' :
@@ -44,9 +46,10 @@ if __name__ == '__main__' :
 
     class_instance = Solution()
     res = Solution.minDepth(class_instance, Tree)
-    print(f'Height of first tree : {res}')
+    print(f'----- example 1 ----- \
+        \nHeight of first tree : {res}')
 
-    print(f'\n----- example 2 -----\n')
+    print(f'----- example 2 -----')
    
    
     # [2, null, 3, null, 4, null, 5, null, 6]
@@ -73,10 +76,9 @@ if __name__ == '__main__' :
 
 
 # $ python minimum-depth-of-bt.py 
-# Height of first tree : 2
-
+# ----- example 1 -----
+# Height of first tree : 2      
 # ----- example 2 -----    
-
 # Height of second tree : 5
 
 # Time complexity : O(n)
