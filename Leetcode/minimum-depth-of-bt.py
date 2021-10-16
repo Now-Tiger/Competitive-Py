@@ -47,7 +47,7 @@ if __name__ == '__main__' :
     class_instance = Solution()
     res = Solution.minDepth(class_instance, Tree)
     print(f'----- example 1 ----- \
-        \nHeight of first tree : {res}')
+        \nDepth of first tree : {res}')
 
     print(f'----- example 2 -----')
    
@@ -72,7 +72,7 @@ if __name__ == '__main__' :
 
     class_instance = Solution()
     res = Solution.minDepth(class_instance, root)
-    print(f'Height of second tree : {res}')
+    print(f'Depth of second tree : {res}')
 
 
 # $ python minimum-depth-of-bt.py 
