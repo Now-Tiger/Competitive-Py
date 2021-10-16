@@ -77,8 +77,8 @@ if __name__ == '__main__' :
 
 # $ python minimum-depth-of-bt.py 
 # ----- example 1 -----
-# Height of first tree : 2      
+# Depth of first tree : 2      
 # ----- example 2 -----    
-# Height of second tree : 5
+# Depth of second tree : 5
 
 # Time complexity : O(n)
