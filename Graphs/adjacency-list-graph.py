@@ -1,8 +1,39 @@
 
-# Adjacency list implement in undirected graph
+# ----------------------------------- Adjacency list implement in undirected graph -----------------------------------
+
+class Graph(object):
+    def __init__(self, nodes, edges) :
+        self.nodes = nodes
+        self.adjList = {}
+        
+        for node in self.nodes :
+            self.adjList[node] = []
+        
+        for u, v in edges :
+            self.adjList[u].append(v)
+            self.adjList[v].append(u)
+    
+    def printGraph(self) :
+        for node in self.nodes :
+            print(node, '->', self.adjList[node])
+            
+if __name__ == '__main__' :
+    nodes = ["A", "B", "C", "D", "E"]
+    allEdges = [('A', 'B'), ('A', 'C'), ('C', 'D'), ('D', 'A'), ('D', 'E'), ('B', 'E')]
+    
+    graph = Graph(nodes, allEdges)
+    graph.printGraph()
+    
+# $ python adjacency-list-graph.py   
+# A -> ['B', 'C', 'D']
+# B -> ['A', 'E']
+# C -> ['A', 'D']
+# D -> ['C', 'A', 'E']
+# E -> ['D', 'B']
+
+# --------------------------------------------------------------------------------------------------------------------
 
 class Graph(object) :
-
     def __init__(self, Nodes) :
         self.nodes = Nodes
         self.adj_list = {}
