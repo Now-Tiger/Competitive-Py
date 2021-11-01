@@ -27,7 +27,7 @@ class ListNode:
 
 class Solution:
     def mergetwolists(self, l1, l2):
-        dummy = Node(0) 
+        dummy = ListNode(0) 
         temp = dummy
         while l1 and l2:
             if l1.value <= l2.value:
