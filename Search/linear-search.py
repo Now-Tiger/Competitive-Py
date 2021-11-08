@@ -27,6 +27,9 @@ if result != -1:
     print('Element found at index', result)
 else :
     print('Element does not exist.')
+    
+# $ python linear-search.py 
+# Element found at index 4
 
 # The time complexity of the above algorithm is O(n). 
 # Linear search is rarely used practically because other search algorithms such as the 
