@@ -31,11 +31,11 @@ if __name__ == '__main__' :
     root.children[0].children[2] = Node(n, 7)
 
     # Create the following tree 
-        #          1
-        #       /  |  \
-        #      2   3   4
-        #    / | \
-        #   5  6  7
+    #             1
+    #          /  |  \
+    #         2   3   4
+    #       / | \
+    #      5  6  7
 
     instance = Solution()
     Solution.inorder(instance, root)
