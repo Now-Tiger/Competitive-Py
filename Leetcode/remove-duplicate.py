@@ -19,6 +19,30 @@
 
 # --------------------------------------------------------------------------------------------------------------------------------------------- 
 
+from typing import List
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int : 
+        n = len(nums) 
+        previous = nums[0]
+        index = 1
+        length = 1
+        if n == 0 : return 0;
+        for i in range(n) :
+            if nums[i] != previous :
+                length += 1
+                previous = nums[i]
+                nums[index] = nums[i]
+                index += 1
+        return length
+    
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+
+# This code is not efficient one; gives error when provided an edge case such : [1, 1]
+# but works fine on large array-consist of numbers.
+# You can use this solution as a naive solution and tell that this isn't a great solution and can implement 
+# another solution that is mentioned above.
+
 class Solution : 
     def removeduplicates(arr, n) :
         # base condition :
@@ -36,9 +60,14 @@ class Solution :
         for i in range(0, j) :
             arr[i] = temp[i]
         return j
-
     
 if __name__ == '__main__' :
+    # For first Solution : 
+    nums = [1, 1]
+    instance = Solution()
+    print(Solution.removeDuplicates(instance, nums))
+    
+    # For second Solution :
     arr = [0,0,1,1,1,2,2,3,3,4]
     n = len(arr)
     n = Solution.removeduplicates(arr, n)
@@ -47,4 +76,5 @@ if __name__ == '__main__' :
         print("%d" % (arr[i]), end=" ")
 
 # $ python remove-duplicate.py 
+# 1
 # 0 1 2 3 4 
