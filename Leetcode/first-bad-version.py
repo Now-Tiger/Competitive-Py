@@ -59,4 +59,4 @@ class Solution :
                 left = mid + 1
         return left
 
-# T.C = O(n)
+# T.C = O(logn)
