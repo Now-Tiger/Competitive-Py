@@ -1,7 +1,45 @@
-'''
-Problem : Given a sorted array arr[] and a number x, write a function that counts the occurrences of x 
-          in arr[]. Expected time complexity is O(Logn)
-'''
+#!/usr/bin/env python3
+
+# Problem : Given a sorted array arr[] and a number x, write a function that 
+#           counts the occurrences of x in arr[]. Expected time complexity 
+#           is O(Logn)
+
+# ---------------------------- Naive approaches ---------------------------- 
+
+# 1. Creating our own function :
+
+from typing import List
+from collections import Counter
+
+def count_occurrences(lis : List[int], key : int) -> int :
+    counter : int = 0
+    for i in lis :
+        if key not in lis :
+            return key
+        elif key == i :
+            counter += 1
+        else :
+            continue
+    return counter 
+
+# eg.
+lis = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8]
+print(count_occurrences(lis, 5))    
+# 3                 <= output
+
+# ------------------- using built in count() function ----------------------
+
+nums : List[int] = [5, 6, 7, 8, 9, 10, 11, 11, 11, 12, 15, 15]
+print(nums.count(11))
+
+# ------------------- using Counter from collections -----------------------
+
+key = 8
+count = Counter(lis)
+print(count[key])
+
+# -------------------------------- Optimized -------------------------------
+
 def binarysearch(A, left, right, x):
     if left > right :
         return -1
@@ -31,8 +69,8 @@ def countoccurrences(A, n, x):
         right += 1
     return count
 
-# Driver code :
-A = [1, 2, 3, 5, 8, 8, 9, 9, 9, 9, 15]
-x = 8
-n = len(A)
-print("Occurance of key",x,"is",countoccurrences(A,n,x),'times.')
+if __name__ == '__main__' :
+    A = [1, 2, 3, 5, 8, 8, 9, 9, 9, 9, 15]
+    x = 8
+    n = len(A)
+    print("Occurance of key",x,"is",countoccurrences(A,n,x),'times.')
