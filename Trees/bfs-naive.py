@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# -------------------------------------- Depth first search class implementation : -------------------------------------------
+# -------------------------------------- Breadth first search class implementation : -------------------------------------------
 
 class Node :
     def __init__(self, value) :
@@ -16,7 +16,7 @@ class Node :
     def __iter__(self) :
         return iter(self.children)
 
-    def depthFirst(self) :
+    def breadthFirst(self) :
         yield self
         for c in self :
             yield from c.depthFirst()
@@ -32,13 +32,13 @@ if __name__ == '__main__' :
     root.addChild(Node(4))
     root.addChild(Node('E'))
 
-    print('Depth first search :')
-    for ch in root.depthFirst() : 
+    print('Breadth first search :')
+    for ch in root.breadthFirst() : 
         print(ch)
 
 
 # $ python tut1.py 
-# Depth first search :     
+# Breadth first search :     
 # 0
 # 1
 # 2
