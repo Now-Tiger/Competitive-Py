@@ -21,7 +21,6 @@ class Node(object) :
                     root.right.insert(new_val)
         else :
             root.value = new_val
-
     
     def levelorder(root) :
         if root is None : return
@@ -70,5 +69,3 @@ tree.levelorder()
 #       60
 
 # T.C = O(n)
-
-
