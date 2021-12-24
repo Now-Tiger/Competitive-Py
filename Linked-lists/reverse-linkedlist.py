@@ -44,7 +44,7 @@ class Linkedlist :
          
     '''
       - This function inserts elements like when you pop out all elements 
-    from a stack on by one. 
+    from a stack one by one. 
       - If you use push function you have to make changes
     in driver function.
     ---------------------------------------------------------------------------
