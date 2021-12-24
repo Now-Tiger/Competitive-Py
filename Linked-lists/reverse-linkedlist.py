@@ -21,10 +21,11 @@
 #
 # ----------------------------------------------------------------------------------------------------
 
+from __future__ import annotations
 from typing import Optional
 
 class Node(object) :
-    def __init__(self, val) :
+    def __init__(self, val: int | str) -> None :
         self.val = val
         self.next = None 
 
@@ -35,34 +36,19 @@ class Linkedlist :
     def reverse(self) :
         prev = None
         current = self.head
+        if self.head.val is None : 
+            print(f"Linked list head empty")
+        return
         while current is not None :
             next = current.next
             current.next = prev
             prev = current
             current = next
         self.head = prev
-         
-    '''
-      - This function inserts elements like when you pop out all elements 
-    from a stack one by one. 
-      - If you use push function you have to make changes
-    in driver function.
-    ---------------------------------------------------------------------------
-    Ex. After inserting all the elements into the linked list it would look
-        like this : 5->4->3->2->1->null
-        Then you'll reverse it using reverse fucntion.
-        seems lil odd  !!
-    ---------------------------------------------------------------------------
-    def push(self, data) :
-        newNode = Node(data)
-        newNode.next = self.head
-        self.head = newNode
-        
-        '''
 
     def printList(self) :
-        if self.head is None :
-            return self.head
+        if self.head.val is None :
+            return
         current = self.head
         while current :
             print(current.val, end = '->')
