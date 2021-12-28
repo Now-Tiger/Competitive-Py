@@ -38,7 +38,7 @@ class Linkedlist :
         current = self.head
         if self.head.val is None : 
             print(f"Linked list head empty")
-        return
+            return
         while current is not None :
             next = current.next
             current.next = prev
