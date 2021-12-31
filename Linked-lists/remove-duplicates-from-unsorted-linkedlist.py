@@ -9,10 +9,10 @@ class Linkedlist(object) :
         self.head = None
 
     def printlist(self) :
-        printval = self.head
-        while printval is not None :
-            print(printval.value, end = ' -> ')
-            printval = printval.next
+        current = self.head
+        while current is not None :
+            print(current.value, end = ' -> ')
+            current = current.next
         print('None')
     
     def remove_dups(self) :
@@ -51,5 +51,3 @@ l.printlist()
 # ----------------------------------------
 
 # 25 -> 35 -> 15 -> 32 -> 80 -> None
-
-
