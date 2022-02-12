@@ -33,20 +33,18 @@ class Linkedlist :
     def __init__(self, head : Optional[Node]) -> Optional[Node] :
         self.head = head
     
-    def reverse(self) :
+    def reverse(self) -> None :
         prev = None
         current = self.head
         if self.head.val is None : 
             print(f"Linked list head empty")
             return
         while current is not None :
-            next = current.next
-            current.next = prev
-            prev = current
-            current = next
+            next, current.next = current.next, prev
+            prev, current = current, next
         self.head = prev
 
-    def printList(self) :
+    def printList(self) -> str :
         if self.head.val is None :
             return
         current = self.head
