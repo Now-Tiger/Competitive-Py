@@ -19,7 +19,7 @@ class Node :
     def breadthFirst(self) :
         yield self
         for c in self :
-            yield from c.depthFirst()
+            yield from c.breadthFirst()
 
 
 if __name__ == '__main__' :
