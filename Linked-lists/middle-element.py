@@ -84,3 +84,12 @@ if __name__ == '__main__':
     list.size()
     list.middle()
     list.middle_element()
+
+
+# $ pypy linked-lists/middle-element.py
+# 10->20->30->40->50->None
+# size = 5
+# Middle element = 30
+# Middle element = 30
+
+# Time Complexity : O(n)  | Space complexity : O(1)
