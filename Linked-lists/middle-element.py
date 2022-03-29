@@ -11,7 +11,7 @@ class Node(object):
 
 
 class LinkedList(object):
-    def __init__(self, head: Optional[Node]) -> None:
+    def __init__(self, head: Optional[Node]) -> Optional[Node]:
         self.head = head
 
     def middle(self) -> int:
