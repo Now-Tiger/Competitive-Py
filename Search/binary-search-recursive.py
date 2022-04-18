@@ -25,3 +25,6 @@ if __name__ == '__main__' :
         print('Element found at the index', index)
     else :
         print('Element does not exist')
+        
+# Space complexity for recursive binary search is O(log(n))
+# Time complexity : O(logn)
