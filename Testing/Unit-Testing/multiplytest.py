@@ -27,9 +27,15 @@ if __name__ == "__main__":
     unittest.main()
     
     
-# $ python multiplytest.py
-# .....
-# ------------------------
-# Ran 5 tests in 0.000s
+# $ python -m unittest -v multiplytest.py
+# test_with_one_negative (multiplytest.TestMultiply) ... ok
+# test_with_one_zero (multiplytest.TestMultiply) ... ok
+# test_with_two_negatives (multiplytest.TestMultiply) ... ok
+# test_with_two_positives (multiplytest.TestMultiply) ... ok
+# test_with_zeroes (multiplytest.TestMultiply) ... ok
+
+# ----------------------------------------------------------------------
+# Ran 5 tests in 0.001s
 
 # OK
+
