@@ -25,3 +25,11 @@ class TestMultiply(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+    
+    
+# $ python multiplytest.py
+# .....
+# ------------------------
+# Ran 5 tests in 0.000s
+
+# OK
