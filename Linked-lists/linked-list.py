@@ -25,6 +25,33 @@ class Linkedlist :
             return True
         return self.search(list.next, key)
     
+    def delete(self, value: int) -> None:
+        """
+            1. If the head itself holds the value to be deletd.
+            2. else search for the value in the linked list,
+               also keep track of previous node as we need to change 
+               'prev.next'
+            ------------------------
+            function returns nothing
+            ------------------------
+            to check use printlist() function.
+        """
+        temp = self.head
+        if (temp is not None):
+            if temp.data == value:
+                self.head = temp.next
+                temp = None
+                return
+        while (temp is not None):
+            if temp.data == value:
+                break
+            prev = temp
+            temp = temp.next
+        if temp == None:
+            return
+        prev.next = temp.next
+        temp = None
+    
     # print the linked list : elements :
     def printlist(self) :
         if self.head == None :
