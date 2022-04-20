@@ -91,44 +91,50 @@ class Linkedlist :
         current.next = newnode
 
 
-def main() :
+if __name__ == "__main__":
     list = Linkedlist()
     list.head = Node(1)
     second = Node(2)
     third = Node(3)
     list.head.next = second
     second.next = third
+
     print('\nInitial linked list :')
     list.printlist()
+
     print('\nInserting 0 at begining : ')
     list.insertAtBegining(0)
+
     list.printlist()
     print('\nInserting 5 at ending :')
+
     list.insertAtEnding(5)
     list.printlist()
+
     print('\nSize of linked-list :')
     list.size()
+
     print('\nSearch element 6 in the list :')
     key = 6
-    if list.search(list.head, key) :
+    if list.search(list.head, key):
         print(f'{key} is present')
-    else :
+    else:
         print(f'{key} is not present')
-    
 
-if __name__ == '__main__' :
-    main()
+    print("\ndeleting node 5")
+    list.delete(5)
+    list.printlist()
 
 
-# $ python linked-list.py 
+# $ python linked-list.py
 
 # Initial linked list :
 # 1->2->3->null
 
-# Inserting 0 at begining :     
+# Inserting 0 at begining :
 # 0->1->2->3->null
 
-# Inserting 5 at ending :       
+# Inserting 5 at ending :
 # 0->1->2->3->5->null
 
 # Size of linked-list :
@@ -136,3 +142,6 @@ if __name__ == '__main__' :
 
 # Search element 6 in the list :
 # 6 is not present
+
+# deleting node 5
+# 0->1->2->3->null
