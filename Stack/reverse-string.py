@@ -14,8 +14,10 @@
 # Expected Auxiliary Space: O(N)
 
 # ------------------------------------------------------------------------------------------------------------------------
+from collections import deque
 
 # Stack implementation using an empty list :
+
 class Stack :
     def __init__(self) :
         self.stack = []
@@ -57,27 +59,18 @@ def reverse(string) :
         string += stack.pop()
     return string
 
-# ------------------------------------------------------------------------------------------------------------------------
-
-if __name__ == '__main__' :
-    string = 'eciNtoNsiemanyM'
-    string = reverse(string)
-    print(f'Reversed string : {string}')
-
-# $ python reverse-string.py 
-# Reversed string : MynameisNotNice
-
-# T.C = O(N)            S.C = O(N)
-
-print('-'*40)
 # ---------------------------------------------- Using deque from collections --------------------------------------------
 
-from collections import deque
 def reversestring(string) :
     stack = deque(string)
     return ''.join(stack.pop() for _ in range(len(stack)))
 
+  
 if __name__ == '__main__' :
+    string = 'eciNtoNsiemanyM'
+    string = reverse(string)
+    print(f'Reversed string : {string}')
+    print('-'*40)
     s = 'llAroFenO'
     print(f'Reversed string : {reversestring(s)}')
 
@@ -86,3 +79,4 @@ if __name__ == '__main__' :
 # ----------------------------------------
 # Reversed string : OneForAll
 
+# T.C = O(N)            S.C = O(N)
