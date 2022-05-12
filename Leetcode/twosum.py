@@ -42,7 +42,7 @@ class Solution:
         while left < right:
             total = nums[left] + nums[right]
             if total == target:
-                return [nums[left], nums[right]]
+                return [left, right]
             elif total < target:
                 left += 1
             else:
