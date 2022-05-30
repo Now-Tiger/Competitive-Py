@@ -83,3 +83,10 @@ if __name__ == "__main__":
     print(f'has sum: {Solution.hasPathSum(instance, root, None)} !')
     print('-'*20)
     print(f'has sum: {Solution.hasSum_own(instance, root, 0)} !')
+
+# $ pypy3 path-sum-bt.py 
+# has sum: True !
+# has sum: False !    
+# has sum: None !     
+# --------------------
+# has sum: False !    
