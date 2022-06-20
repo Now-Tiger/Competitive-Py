@@ -23,9 +23,8 @@ class Solution(object):
             return 1
         elif root.left is None:
             return self.minimum_depth_(root.right) + 1
-        # elif root.right is None:
-        else:
-            self.minimum_depth_(root.left) + 1
+        elif root.right is None:
+            return self.minimum_depth_(root.left) + 1
         return min(self.minimum_depth_(root.left), self.minimum_depth_(root.right)) + 1
 
     def min_depth(self, root: Optional[Node]) -> int:
