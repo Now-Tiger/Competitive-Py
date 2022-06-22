@@ -1,22 +1,48 @@
-#!/usr/bin/ pypy3
+#!/usr/bin/ pyp3
 # -*- coding: utf-8 -*-
 
 # Program to calculate maximum depth of a binary tree.
 # Below are two possible solutions:
-#   1. Using recursion  
-#   2. using queue data structure.
-
+#   1. using queue data structure.
+#   2. Using recursion
 
 from __future__ import annotations
+from collections import deque
 from typing import Optional
+
 
 class Node(object):
     def __init__(self, data: int) -> None:
-        self.data = data 
-        self.left = None 
-        self.right = None 
+        self.data = data
+        self.left = None
+        self.right = None
+
 
 class Solution(object):
+    def max_depth(self, root: Optional[Node]) -> int:
+        """
+            type root: Node
+            return type: int
+        """
+        depth: int = 0
+        if not root:
+            print('reached leaf')
+            return depth
+
+        queue = deque([root])
+        while queue:
+            size = len(queue)
+            for i in range(size):
+                root = queue.popleft()
+                if root.left is not None:
+                    queue.append(root.left)
+                if root.right is not None:
+                    queue.append(root.right)
+            depth += 1
+        return depth
+
+        ...
+
     def max_depth_rec(self, root: Optional[Node]) -> int:
         """
             this is a recursive solution to calculate the 
@@ -37,8 +63,9 @@ class Solution(object):
         # print(f'left depth: {leftnode} | right depth: {rightnode}')
         if leftnode > rightnode:
             return leftnode
-        else: 
+        else:
             return rightnode
+
 
 if __name__ == "__main__":
     tree = Node(10)
@@ -48,22 +75,22 @@ if __name__ == "__main__":
     tree.left.left.left = Node(13)
 
     instance = Solution()
-    depth = Solution.max_depth_rec(instance, tree)
-    print(f"depth: {depth}")
+    depth_q = Solution.max_depth(instance, tree)
+    print(f"depth: {depth_q}")
 
-    # depth_uncover = Solution.max_depth_rec(instance, tree.left)
-    # print(f"depth: {depth_uncover}")
+    print('-' * 20)
 
-# $ pypy3 maximum-depth.py 
-# processing the node: 10
+    depth_rec = Solution.max_depth_rec(instance, tree.left)
+    print(f"depth: {depth_rec}")
+
+# $ pypy3 maximum-depth.py
+# depth: 4
+# --------------------
 # processing the node: 20
 # processing the node: 15
 # processing the node: 13
-# reached to the leaf !  
-# reached to the leaf !  
-# reached to the leaf !  
-# reached to the leaf !  
-# processing the node: 30
-# reached to the leaf !  
-# reached to the leaf !  
-# depth: 4
+# reached to the leaf !
+# reached to the leaf !
+# reached to the leaf !
+# reached to the leaf !
+# depth: 3
