@@ -1,4 +1,4 @@
-#!/usr/bin/ pyp3
+#!/usr/bin/ pypy3
 # -*- coding: utf-8 -*-
 
 # Program to calculate maximum depth of a binary tree.
