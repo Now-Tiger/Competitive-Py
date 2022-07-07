@@ -42,7 +42,7 @@ class TreeNode :
         self.right = None
 
 class Solution :
-    def cousins_naive(self, root: Optional[Node]) -> bool:
+    def cousins_naive(self, root: Optional[TreeNode]) -> bool:
         """
             This is a naive recursive solution.
             we have been told that, 'Two nodes of a binary 
