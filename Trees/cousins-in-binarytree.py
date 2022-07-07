@@ -31,7 +31,9 @@
 #
 # ------------------------------------------------------------------------------------------------------------------------
 
+from typing import Optional
 from collections import deque
+
 
 class TreeNode :
     def __init__(self, val = 0) :
@@ -40,6 +42,24 @@ class TreeNode :
         self.right = None
 
 class Solution :
+    def cousins_naive(self, root: Optional[Node]) -> bool:
+        """
+            This is a naive recursive solution.
+            we have been told that, 'Two nodes of a binary 
+            tree are cousins if they have the same depth, 
+            but have different parents.'
+            Therefore in this solution we can just check 
+            left and right depths from root.
+            -----------------------------------------------
+            This is not a correct solution. below solution
+            is better one.
+        """
+        if not root: return 0
+        left_depth: int = self.cousins_naive(root.left) + 1
+        right_depth: int = self.cousins_naive(root.right) + 1
+        return left_depth == right_depth
+        
+        
     def cousins(self, root, x, y) :
         queue = deque()
         queue.append((root, 0))
