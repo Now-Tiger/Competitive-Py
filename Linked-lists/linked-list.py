@@ -25,7 +25,7 @@ class Linkedlist :
             return True
         return self.search(list.next, key)
     
-    def delete(self, value: int) -> None:
+    def delete(self, value) :
         """
             1. If the head itself holds the value to be deletd.
             2. else search for the value in the linked list,
