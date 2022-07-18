@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Python program to find most common elements of a linked list.
-# These are several approaches; whihc are extremely bad and messy, basically not efficient.
+# These are several approaches; which are extremely bad and messy, basically not efficient.
 
 from __future__ import annotations
 from collections import Counter
