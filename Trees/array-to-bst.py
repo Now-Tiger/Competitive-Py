@@ -59,8 +59,6 @@ class Solution(object):
 
 if __name__ == "__main__":
     A = [1, 2, 3, 4, 5, 6, 7]
-    right = len(A) - 1
-    left = 0
     instance = Solution()
     root = Solution.build_bst(instance, A)
     Solution.printtree(instance, root)
