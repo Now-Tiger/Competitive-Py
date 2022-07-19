@@ -15,7 +15,7 @@ class Node(object):
 
 
 class Solution(object):
-    def build_bst(self, A: list) -> None:
+    def build_bst(self, A: list) -> Node:
         left: int = 0
         right: int = len(A) - 1
         if left > right:
