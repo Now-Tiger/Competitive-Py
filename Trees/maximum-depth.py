@@ -56,15 +56,9 @@ class Solution(object):
             print('reached to the leaf !')
             return 0
         print(f'processing the node: {root.data}')
-        # print(f'checking left node')
-        leftnode = self.max_depth_rec(root.left) + 1
-        # print(f'checking right node')
-        rightnode = self.max_depth_rec(root.right) + 1
-        # print(f'left depth: {leftnode} | right depth: {rightnode}')
-        if leftnode > rightnode:
-            return leftnode
-        else:
-            return rightnode
+        leftdepth = self.max_depth_rec(root.left) + 1
+        rightdepth = self.max_depth_rec(root.right) + 1
+        return max(leftdepth, rightdepth)
 
 
 if __name__ == "__main__":
