@@ -3,7 +3,7 @@
 
 # Problem statement: Count Number of Nodes in a Binary Tree (complete binary tree is given)
 # -----------------------------------------------------------------------------------------
-# Below I've given two solutions for the problem.
+# Below I've given two(methods) solutions for the problem.
 
 import time
 from typing import Optional
