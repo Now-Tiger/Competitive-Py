@@ -1,3 +1,6 @@
+#!/use/bin/env/ pypy3
+# -*- coding: utf-8 -*-
+
 # 705.
 # ------------------------------------------------ Design HashSet ------------------------------------------------
 # Design a HashSet without using any built-in hash table libraries.
