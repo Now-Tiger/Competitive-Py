@@ -1,3 +1,5 @@
+#!/use/bin/env/ Pye
+# -*- coding: utf-8 -*-
 # ------------------------------------ Sort given linked list in ascending order ------------------------------------ #
 
 from collections import deque
