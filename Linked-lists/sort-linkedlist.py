@@ -1,4 +1,4 @@
-#!/use/bin/env/ Pye
+#!/use/bin/env/ pypy3
 # -*- coding: utf-8 -*-
 # ------------------------------------ Sort given linked list in ascending order ------------------------------------ #
 
