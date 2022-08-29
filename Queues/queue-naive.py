@@ -1,4 +1,4 @@
-#!/yar/bin/ pypy3
+#!/usr/bin/ pypy3
 # -*- coding: utf-8 -*-
 # ----------------------------- Queue implementation using array -----------------------------
 
@@ -19,7 +19,7 @@ class Queue :
 
     # Display queue 
     def display(self) :
-        return self.queue
+        return self.items
 
 def main() :
     queue = Queue()
