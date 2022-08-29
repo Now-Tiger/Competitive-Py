@@ -1,4 +1,5 @@
-
+#!/yar/bin/ pypy3
+# -*- coding: utf-8 -*-
 # ----------------------------- Queue implementation using array -----------------------------
 
 class Queue :
@@ -18,10 +19,7 @@ class Queue :
 
     # Display queue 
     def display(self) :
-        arr = []
-        for i in self.items :
-            arr.append(i)
-        return arr
+        return self.queue
 
 def main() :
     queue = Queue()
@@ -29,6 +27,7 @@ def main() :
     queue.enqueue('youtube')
     queue.enqueue('udemy')
     queue.enqueue('udacity')
+    print(queue.display())
     queue.dequeue()
     queue.dequeue()
     print(queue.display())
@@ -38,7 +37,8 @@ def main() :
 if __name__ == '__main__' :
     main()
 
-# $ python queue.py 
+# $ pypy3 queue.py 
+# ['google', 'youtube', 'udemy', 'udacity']
 # ['udemy', 'udacity']
 
 
