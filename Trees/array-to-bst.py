@@ -35,7 +35,7 @@ class Solution(object):
             new_node.right = self.build_bst(A[mid + 1:])
         return new_node
 
-    def printtree(self, root: Node) -> str:
+    def printtree(self, root: Node) -> None:
         """
             this function returns the inorder
             traversal of the BST.
@@ -49,7 +49,7 @@ class Solution(object):
         if root.right:
             self.printtree(root.right)
 
-    def preorder(self, root: Node) -> str:
+    def preorder(self, root: Node) -> None:
         if not root:
             return 0
         print(root.data, end=", ")
