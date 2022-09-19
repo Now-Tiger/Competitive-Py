@@ -34,7 +34,7 @@ class Statistics(object):
         # return max(set(self.arr), key=self.arr.count)
         return counter(self.arr).most_common(1)[0][0]
 
-    def median(self) -> int:
+    def median(self) -> float:
         n = len(self.arr)
         sorted_arr = sorted(self.arr)
         midpoint = n // 2
