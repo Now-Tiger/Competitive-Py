@@ -21,11 +21,10 @@
 #
 # ----------------------------------------------------------------------------------------------------
 
-from __future__ import annotations
 from typing import Optional
 
 class Node(object) :
-    def __init__(self, val: int | str) -> None :
+    def __init__(self, val: int) -> None :
         self.val = val
         self.next = None 
 
