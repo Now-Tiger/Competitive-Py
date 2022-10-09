@@ -35,7 +35,7 @@ class Deque(object):
             print("Queue underflow")
             return
         else:
-            self.queue.pop(0)
+            self.queue.pop()
             self.size -= 1
         if self.size == 0:
             self.front = self.rear = None
@@ -49,7 +49,7 @@ class Deque(object):
             print("Queue underflow")
             return
         else:
-            self.queue.pop()
+            self.queue.pop(0)
             self.size -= 1
         if self.size == 0:
             self.front = self.rear = None
@@ -90,6 +90,9 @@ if __name__ == "__main__":
     q.dequeue_rear()
     q.dequeue_front()
 
+    print(q.queue_front())
+    print(q.queue_rear())
+
 
 # $ pypy3 inputs-restricted-queue.py
 # Queue overflow ...
@@ -97,6 +100,7 @@ if __name__ == "__main__":
 # [1, 2, 3, 4, 5]
 # is queue empty ?
 # - False
-# queue after deletion from rear: [1,
-# 2, 3, 4]
+# queue after deletion from rear: [2, 3, 4, 5]
 # queue after deletion from front: [2, 3, 4]
+# 2
+# 4
