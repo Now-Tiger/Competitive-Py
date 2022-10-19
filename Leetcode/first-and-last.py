@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 # ---------------------------------- Find First and Last Position of Element in Sorted Array --------------------------------------
 
@@ -17,79 +18,54 @@
 #
 # --------------------------------------------------------------------------------------------------------------------------------
 
-from typing import List
 
-class Solution :
-    def searchRange(self, nums : List[int], target : int) -> List[int] :
-        left : int = 0
-        right : int = len(nums) - 1
-        start : int = -1
-        end : int = -1
-        
-        while left <= right :
-            mid : int = (left + right ) // 2
-            if target == nums[mid] :
-                start = mid
-                right = mid - 1
-            elif target < nums[mid] :
-                right = mid - 1
-            else :
-                left = mid + 1
-        if start == -1 :
-            return -1, -1
-        
-        left = 0
-        right = len(nums) - 1
-        while left <= right :
-            mid : int = (left + right) // 2
-            if target == nums[mid] :
-                end = mid
-                left = mid + 1
-            elif target < target :
-                right = mid - 1
-            else :
-                left = mid + 1
-        return start, end 
+class Solution(object):
+    def searchRange(self, nums: list, target: int) -> list:
+        def binarysearch(self, nums: list, target: int) -> int:
+            left = 0
+            right = len(nums)
+            while (left < right):
+                mid = (left + right) // 2
+                if target > nums[mid]:
+                    left = mid + 1
+                else:
+                    right = mid
+            return left
 
-if __name__ == '__main__' :
-    # Example 1 :
-    # nums = [5,7,7,8,8,10], target = 8
-    nums : List[int] = [5, 7, 7, 8, 8, 10]
-    target : int = 8
-    print(Solution.searchRange(Solution, nums, target))
+        left = binarysearch(self, nums, target)
+        if left == len(nums) or nums[left] != target:
+            return [-1, -1]
 
-    # Example 2 :
-    nums = [5, 7, 7, 8, 8, 10]
-    target = 6
-    print(Solution.searchRange(Solution, nums, target))
+        right = binarysearch(self, nums, target + 1)
+        return [left, right - 1]
 
-    print('\n---------------------------\n')
-
-# -------------------------------------------------------------------------------------------------------------------------------
-
-class Solution :
-    def firstLast(self, nums : List[list], target : int) -> List[int] :
-        first : int = -1
-        last : int = -1
-        for i in range(len(nums)) :
-            if target != nums[i]  :
+    def time_optimized(self, nums: list, target: int) -> list:
+        first = -1
+        last = -1
+        for i in range(len(nums)):
+            if target != nums[i]:
                 continue
-            if first == -1 :
+            if first == -1:
                 first = i
             last = i
-        if first != -1 :
-            return first, last
-        return first, last
+        if first != -1:
+            return [first, last]
+        return [first, last]
 
-if __name__ == '__main__' :
-    nums : List[int] = [5, 7, 7, 8, 8, 10]
-    target : int = 8
-    print(Solution.firstLast(Solution, nums, target))
 
-    nums : List[int] = [5, 7, 7, 8, 8, 10]
-    target : int = 6
-    print(Solution.firstLast(Solution, nums, target))
+if __name__ == '__main__':
+    # Example 1:
+    nums = [5, 7, 7, 8, 8, 10]
+    target = 8
+    instance = Solution()
+    print(Solution.searchRange(instance, nums, target))
 
-# $ python first-and-last.py 
-# (3, 4)
-# (-1, -1)
+    # Example 2 :
+    nums = [5, 7, 8, 8, 7, 8, 10]
+    target = 8
+    print(Solution.time_optimized(instance, nums, target))
+
+
+# $ pypy3 first-and-last.py
+# [3, 4]
+# [2, 5]
