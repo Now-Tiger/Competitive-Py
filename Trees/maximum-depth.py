@@ -41,8 +41,6 @@ class Solution(object):
             depth += 1
         return depth
 
-        ...
-
     def max_depth_rec(self, root: Optional[Node]) -> int:
         """
             this is a recursive solution to calculate the 
@@ -61,7 +59,7 @@ class Solution(object):
         return max(leftdepth, rightdepth)
 
 
-if __name__ == "__main__":
+def main() -> None:
     tree = Node(10)
     tree.left = Node(20)
     tree.right = Node(30)
@@ -76,6 +74,9 @@ if __name__ == "__main__":
 
     depth_rec = Solution.max_depth_rec(instance, tree.left)
     print(f"depth: {depth_rec}")
+    
+if __name__ == "__main__":
+    main()
 
 # $ pypy3 maximum-depth.py
 # depth: 4
