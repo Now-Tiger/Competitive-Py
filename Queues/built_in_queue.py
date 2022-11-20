@@ -46,3 +46,8 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+# $ pypy3 built_in_queue.py
+# First insert elements in the queue...    
+# 11, 22, 54, 88, 0.65,
