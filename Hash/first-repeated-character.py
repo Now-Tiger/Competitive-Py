@@ -1,5 +1,5 @@
 #!/usr/bin/ python3
-
+# -*- coding: uf-8 -*-
 # Problem : Give an algorithm for printing the first repeated character if there are duplicated elements in it.
 
 
@@ -20,8 +20,7 @@ class solution(object):
                 if string[i] == string[j]:
                     print(string[i])
                     counter = 1
-                    break
-        
+                    break       
         if counter == 0:
             print(-1)
             return 
@@ -40,14 +39,13 @@ class solution(object):
                 table[string[i]] += 1
             else:
                 table[string[i]] = 1
-        
+
         count: int = 0
         for i in range(size):
             if table[string[i]] >1:
                 print(string[i])
                 count = 1
                 break
-        
         if count == 0:
             print(-1)
 
