@@ -104,6 +104,6 @@ if __name__ == "__main__":
     # lis.remove()
     lis.printlist()
 
-# $ pypy3 linked-lists/remove-duplicates-new.py
+# $ pypy3 linked-lists/remove-duplicates.py
 # 11->11->12->13->15->None
 # 11->12->13->15->None
