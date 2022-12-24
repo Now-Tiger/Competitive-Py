@@ -87,5 +87,3 @@ if __name__ == '__main__' :
 
     print(f'Front : {q.queueFront()}')
     print(f'Rear : {q.queueRear()}')
-
-
