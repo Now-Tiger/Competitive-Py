@@ -19,14 +19,13 @@ class Solution:
         Time complexity is O(n^2)
         resons is two loops / nested loop
     """
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def two_Sum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums) - 1):
             for j in range(i, len(nums)):
                 if (nums[i] + nums[j] == target):
                     return [i, j]
         return []
 
-# ----------------------------------------------------------------
 
 class Solution:
     """
@@ -35,7 +34,7 @@ class Solution:
         and used only single loop over the elements.
         Time complexity is O(nlogn)
     """
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum_(self, nums: List[int], target: int) -> List[int]:
         nums.sort()
         left = 0
         right = len(nums) - 1
