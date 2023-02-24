@@ -10,8 +10,8 @@
 # Output: [0,1]
 # Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 # ----------------------------------------------------------------------------------------------------------------------
-
 from typing import List
+
 
 class Solution:
     """
@@ -25,16 +25,15 @@ class Solution:
                 if (nums[i] + nums[j] == target):
                     return [i, j]
         return []
-
-
-class Solution:
-    """
+    
+    
+    def twoSum_(self, nums: List[int], target: int) -> List[int]:
+        """
         This one is better than the previous one.
         We have sorted the array in ascending order
         and used only single loop over the elements.
         Time complexity is O(nlogn)
-    """
-    def twoSum_(self, nums: List[int], target: int) -> List[int]:
+        """
         nums.sort()
         left = 0
         right = len(nums) - 1
@@ -48,9 +47,7 @@ class Solution:
                 right -= 1
         return []        
 
-# ----------------------------------------------------------------
 
-class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         dict = {}
         for i, num in enumerate(nums):
@@ -59,6 +56,7 @@ class Solution:
                 return[i,  dict[remaining]]
             else :
                 dict[num] = i
+
 
 if __name__ == "__main__" :
     array = [1, 2, 3, -7, -5]
