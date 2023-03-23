@@ -8,20 +8,18 @@ from typing import Optional
         2: 5->4->3->2->4 : False
 """
 
-
-class Node(object):
+class Node:
     def __init__(self, data: int) -> None:
         self.data = data
         self.next = None
 
 
-class LinkedList(object):
+class LinkedList:
     def __init__(self, head: Optional[Node]) -> None:
         self.head = head
 
     def efficient_approach(self) -> bool:
-        """ Built in method for LinkedList class, implements \
-        two pointer approach.
+        """ Built in method for LinkedList class, implements two pointer approach.
         `NOT A GOOD PRACTICE THO`
         - FIX THE BUG OF THIS METHOD **ASAP**
         --------
@@ -32,19 +30,18 @@ class LinkedList(object):
         --------
         bool: True if the linkedlist is Polindrome else False.
         """
-        slow = self.head
-        fast = self.head
         if self.head is None and self.head.next is None:
             return True
+        slow = self.head
+        fast = self.head
         while fast.next != None and fast.next.next != None:
             slow = slow.next
             fast = fast.next.next
-        # slow pointer is pointing to the middle element,
-        # so reversing the list after the middle element.
+            
+        # slow pointer is pointing to the middle element, so reversing the list after the middle element.
         slow.next = self.reverse_helper(slow.next)
         slow = slow.next
         temp = self.head
-
         while slow != None:
             if temp.data != slow.data:
                 return False
@@ -75,7 +72,7 @@ class LinkedList(object):
             self.head = self.head.next
         return is_polindrome
 
-    def second_approach(self) -> None:
+    def second_approach(self) -> bool:
         """ This is also a naive approach 
             -----------------------------
             - Save all the nodes in an array.
@@ -105,9 +102,7 @@ class LinkedList(object):
         return True
 
     def reverse_helper(self, head: Node) -> Node:
-        prev = None
-        next = None
-        curr = head
+        prev, next, curr = (None, None, head)
         if head is None:
             print(f"head is empty!")
             return
