@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Day5 H.W.</title>
+</head>
+
+<body>
+
+    <h2>Conditional Statement</h2>
+    <ol>
+        <div id="div1" style="background-color: cadetblue;">
+
+
+            <li>
+                <h4>If and else Statement: Find the entered number is positive or negative</h4>
+            </li>
+
+            Number : <input type="number" id="num1" required />
+
+            <input type="button" value="Check" onclick="fun()" />
+
+            <script>
+                function fun() {
+                    var num1 = document.getElementById("num1").value;
+
+                    if (num1 > 0) {
+                        window.alert("Entered number is Positive");
+                    } else {
+                        window.alert("Entered number is negative");
+                    }
+                }
+            </script>
+        </div>
+
+        <hr>
+
+        <div id="div2" style="background-color: blueviolet;">
+            <li>
+                <h4>if else if statement : To check enter alphabet is vowel or not</h4>
+            </li>
+            Enter the Alphanet : <input type="text" id="txt1">
+
+            <input type="button" value="Check" onclick="fun1()">
+
+            <script>
+                function fun1() {
+                    var text1 = document.getElementById("txt1").value;
+
+                    if (text1 == "a") {
+                        window.alert("Entered alphabet is vowel!");
+                    }
+                    else if (text1 == "e") {
+                        window.alert("Entered alphabet is vowel!");
+                    }
+                    else if (text1 == "i") {
+                        window.alert("Entered alphabet is vowel!");
+                    }
+                    else if (text1 == "o") {
+                        window.alert("Entered alphabet is vowel!");
+                    }
+                    else if (text1 == "u") {
+                        window.alert("Entered alphabet is vowel!");
+                    }
+                    else {
+                        window.alert("Entered aplphabet is not vowel!")
+                    }
+                }
+            </script>
+
+        </div>
+
+        <hr>
+
+        <div id="div3" style="background-color: royalblue;">
+            <li>
+                <h4>switch statement : To check enter alphabet is vowel or not</h4>
+            </li>
+
+            Enter the alphabet : <input type="text" id="txt2">
+
+            <input type="submit" value="Check" onclick="fun2()">
+
+
+
+            <script>
+                function fun2() {
+                    var text2 = document.getElementById("txt2").value;
+
+                    switch (text2) {
+                        case "a": window.alert("Enter alphabet is not constant!");
+                        case "e": window.alert("Enter alphabet is not constant!");
+                        case "i": window.alert("Enter alphabet is not constant!");
+                        case "o": window.alert("Enter alphabet is not constant!");
+                        case "u": window.alert("Enter alphabet is not constant!");
+                        
+                        default: window.alert("Enter alphabet is constant!");
+                    }
+                }
+            </script>
+        </div>
+
+        <hr>
+
+        <div id="div4" style="">
+            <li>
+                <h4>Result Page</h4>
+            </li>
+
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td><input type="text" id="nametxt"></td>
+                </tr>
+                <tr>
+                    <td>HTML Marks : </td>
+                    <td><input type="number" id="htmltxt"></td>
+                </tr>
+                <tr>
+                    <td>CSS Marks : </td>
+                    <td><input type="number" id="csstxt"></td>
+                </tr>
+                <tr>
+                    <td>Java Script Marks : </td>
+                    <td><input type="number" id="jstxt"></td>
+                </tr>
+                <tr>
+                    <td>Batch : </td>
+                    <td><select name="Batch" id="batchtxt">
+                            <option value="Jan23">Jan23</option>
+                            <option value="Feb23">Feb23</option>
+                            <option value="May23">May23</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="submit" onclick="Func()"></td>
+
+                    <td><td><input type="button" value="Clear All" onclick="clear()"></td></td>
+                </tr>
+
+            </table>
+            <br>
+
+            <div id="div5" >
+                <table id="tbl1" border="1">
+                    <tr>
+                        <td>Name</td>
+                        <td>HTML Marks</td>
+                        <td>CSS Marks</td>
+                        <td>Java Script Marks</td>
+                        <td>Batch</td>
+                        <td>Result</td>
+                        <td>Percentage</td>
+                        <td>Grade</td>
+                    </tr>
+                </table>
+            </div>
+
+            <script>
+                function Func() {
+                    var name = document.getElementById("nametxt").value;
+                    var htmlmark = parseInt(document.getElementById("htmltxt").value);
+                    var cssmark = parseInt(document.getElementById("csstxt").value);
+                    var jsmark = parseInt(document.getElementById("jstxt").value);
+                    var batch = document.getElementById("batchtxt").value;
+                    var sum = ((htmlmark+cssmark+jsmark) / 300);
+                    var per = sum * 100 ;
+                    
+                    var result = "";
+
+                    if (per > 35) {
+                        result = "Pass";
+                    } else {
+                        result = "Fail";
+                    }
+
+                    var grade = "";
+                    if (per >= 75) {
+                        grade = "First Class";
+                    } else if (per >= 60 && per < 75) {
+                        grade = "Second Class";
+                    } else if (per >= 35 && per < 60) {
+                        grade = "Average";
+                    }
+
+                    var str = "";
+                    str = "<tr><td>"+name+"</td><td>"+htmlmark+"</td><td>"+cssmark+"</td><td>"+jsmark+"</td><td>"+batch+"</td><td>"+result+"</td><td>"+per+"</td><td>"+grade+"</td></tr>";
+                    var table1 = document.getElementById("tbl1");
+                    table1.innerHTML += str;
+
+                    
+                   
+                    if (name == "" || htmlmark == "" || cssmark == "" || jsmark == "" || batch == "") {
+                        window.alert("Please insert the data!")
+                    }
+                    else {
+                         // This part olny for widow alert
+                        if (per > 35) {
+
+                            window.alert("Hi " + name + " Your batch is " + batch + " Congratulations you are Pass!");
+                            
+                        }
+
+                        else {
+
+                            window.alert("Hi " + name + " Your batch is " + batch + " you are not qualified this time!");
+                        
+                        }
+                    }
+                }
+
+                
+            </script>
+
+        </div>
+
+    </ol>
+</body>
