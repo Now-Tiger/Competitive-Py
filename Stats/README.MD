@@ -1,1 +1,0 @@
-- Some statistical formulaes in python3.
