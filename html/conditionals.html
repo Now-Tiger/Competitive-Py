@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals</title>
+
+</head>
+
+<body>
+    <h2>Conditionals Operations</h2>
+    <ol>
+        <div>
+            <li>
+                <h4>Find the entered number is positive or negative.</h4>
+            </li>
+            Number : <input type="number" id="num1" required />
+            <input type="button" value="check" onclick="checkPositiveNegative()" />
+            <script>
+                function checkPositiveNegative() {
+                    var num = document.getElementById("num1").value;
+                    if (num > 0) {
+                        window.alert("Entered number is Positive");
+                    } else if (num == 0) {
+                        window.alert("Entered number is 0");
+                    } else {
+                        window.alert("Entered number is Negative");
+                    }
+                }
+            </script>
+        </div>
+        <hr>
+
+        <div>
+            <li>
+                <h4>Check if entered alphabet is Vowel or not</h4>
+            </li>
+            Enter alphabet <input type="text" id="vowel" required />
+            <input type="button" value="check" onclick="checkVowel()" />
+            <script>
+                function checkVowel() {
+                    var txt = document.getElementById("vowel").value;
+                    if (txt == "a" || txt == "e" || txt == "i" || txt == "o" || txt == "u") {
+                        window.alert("Entered alphabet is vowel!");
+                    }
+                    else {
+                        window.alert("Entered alphabet is not a vowel");
+                    }
+                }
+            </script>
+        </div>
+        <hr>
+
+        <div>
+            <li>
+                <h4>Result Page</h4>
+            </li>
+            <table>
+                <tr>
+                    <td>Name </td>
+                    <td> <input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td>HTML marks</td>
+                    <td><input type="number" id="htmlmarks"></td>
+                </tr>
+                <tr>
+                    <td>CSS marks</td>
+                    <td><input type="number" id="cssmarks"></td>
+                </tr>
+                <tr>
+                    <td>Javascript marks</td>
+                    <td><input type="number" id="jsmarks"></td>
+                </tr>
+                <tr>
+                    <td>Batch</td>
+                    <td><select name="Batch" id="batchtxt">
+                            <option value="Jan23">January 2023</option>
+                            <option value="Feb2023">February 2023</option>
+                            <option value="March2023">March 2023</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="submit" onclick="submitResult()"></td>
+                    <td>
+                    <td><input type="button" value="clear" onclick="clear()"></td>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="div5">
+            <table id="tbl1" border="1">
+                <tr>
+                    <td>Name</td>
+                    <td>HTML Marks</td>
+                    <td>CSS Marks</td>
+                    <td>Java Script Marks</td>
+                    <td>Batch</td>
+                    <td>Result</td>
+                    <td>Percentage</td>
+                    <td>Grade</td>
+                </tr>
+            </table>
+        </div>
+
+    </ol>
+
+</body>
+
+</html>

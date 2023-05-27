@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Print odd & even numbers between two numbers</h2>
+
+    Enter First Number <input type="number" id="num1"> <br />
+    Enter Second Number <input type="number" id="num2"> <br />
+    <br />
+    <input type="button" value="Even" id="evenNum" onclick="even()" />
+    <input type="button" value="Odd" id="oddNum" onclick="odd()" />
+
+    <div id="div1"></div>
+
+    <script>
+        function even() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var div = document.getElementById("div1").value;
+            for (i = num1; i <= num2; i++) {
+                if (i % 2 == 0) {
+                    div1.innerHTML += "<br>" + i;
+                }
+            }
+        }
+
+        function odd() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var div = document.getElementById("div1").value;
+            for (i = num1; i <= num2; i++) {
+                if (i % 2 != 0) {
+                    div1.innerHTML += "<br>" + i;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
