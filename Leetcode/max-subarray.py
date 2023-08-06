@@ -35,4 +35,4 @@ class solution :
 if __name__ == '__main__' :
     A = [-2,1,-3,4,-1,2,1,-5,4]
     res = solution.maxsubarray(A)
-    res
+    print(res)
