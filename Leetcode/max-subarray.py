@@ -36,6 +36,3 @@ if __name__ == '__main__' :
     A = [-2,1,-3,4,-1,2,1,-5,4]
     res = solution.maxsubarray(A)
     res
-
-# This implementation is not the efficient one since it took 640ms runtime and 14.55mb memory.
-# --------------------------------------------------------------------------------------------------------------------
