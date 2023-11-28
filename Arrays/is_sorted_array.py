@@ -18,7 +18,7 @@ def is_sorted_iterative(array: List[int]) -> bool:
     for i in range(len(array) - 1):
         if array[i] >= array[i + 1] and array[i] != array[i + 1]:
             # displays where condition is failed.
-            print(f">> {array[i]} -> {array[i + 1]}")
+            print(f">> {array[i]} > {array[i + 1]}")
             return False
     return True
 
