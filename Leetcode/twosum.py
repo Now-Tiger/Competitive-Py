@@ -49,7 +49,7 @@ class Solution:
         return []        
 
 
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def two_sum_hasmap(self, nums: List[int], target: int) -> List[int]:
         dict = {}
         for i, num in enumerate(nums):
             remaining =  target- num
@@ -63,5 +63,5 @@ if __name__ == "__main__" :
     array = [1, 2, 3, -7, -5]
     target = -12
     instance = Solution()
-    res = Solution.twoSum(instance, array, target)
+    res = Solution.two_sum_hasmap(instance, array, target)
     print(res)
